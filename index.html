@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solace</title>
+    <link href="./Css/output.css" rel="stylesheet" />
+    <link href="./image/Icon.png" rel="icon" />
+  </head>
+  <body>
+    <main class="home w-full text-slate-200 box-border">
+      <!--              Navigation Bar         -->
+      <nav
+        class="w-full pt-7 pb-4 px-5 sm:px-8 md:px-10 text-slate-200 flex justify-between items-center fixed top-0 bg-black/40 z-10"
+      >
+        <img src="./image/logo.png" class="w-[22vw] sm:w-[18vw] lg:w-[12vw]" />
+        <ul class="flex text-base md:text-xl gap-[3vw] uppercase">
+          <li id="home" class="navHover">Home</li>
+          <li id="register" class="navHover">Registered</li>
+        </ul>
+      </nav>
+      <!--      Form Section     -->
+      <section
+        class="flex justify-center items-center w-full h-screen pt-[74px]"
+      >
+        <form
+          id="add"
+          class="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[55%] mx-auto backdrop-blur-md bg-neutral-900/25 space-y-12 py-9 transition-all"
+        >
+          <h1 class="text-2xl lg:text-4xl text-center">
+            University Resitration Form
+          </h1>
+          <div class="space-y-10 lg:space-y-12 flex flex-col w-[80%] mx-auto">
+            <input
+              type="text"
+              class="input"
+              id="name"
+              placeholder="Student Name"
+              required
+            />
+            <input
+              type="text"
+              class="input"
+              id="id"
+              placeholder="Student Id"
+              required
+            />
+            <input
+              type="email"
+              class="input"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              class="input"
+              id="contact"
+              placeholder="Contact No"
+              required
+            />
+            <button
+              id="submitBtn"
+              type="submit"
+              class="text-slate-400 font-medium border-2 border-slate-400 w-fit py-0.5 md:py-1 px-5 md:px-7 lg:px-10 rounded-xl self-end md:self-center hover:text-slate-200 hover:border-slate-200 transition-all"
+            >
+              Add
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!--             student data section                  -->
+
+      <section
+        class="bg-slate-950 min-w-full h-screen pt-[138px]"
+        id="registerSection"
+      >
+        <h1
+          class="text-center mb-9 font-bold text-2xl md:text-4xl text-slate-300"
+        >
+          Students Registered
+        </h1>
+        <p
+          class="text-center text-slate-600 text-2xl sm:text-4xl md:text-6xl block"
+          id="error"
+        >
+          Please Enter Your First Data
+        </p>
+        <div
+          id="dataSection"
+          class="w-[99%] sm:w-[95%] lg:w-[90%] xl:w-[85%] mx-auto overflow-x-scroll sm:overflow-x-hidden hidden"
+        >
+          <table class="border-2 w-full border-spacing-y-5">
+            <thead class="bg-slate-500">
+              <tr>
+                <th class="py-3">Name</th>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Contact No</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fd5db906e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
